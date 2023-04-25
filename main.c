@@ -37,7 +37,7 @@ struct time subtractTimes(struct time *time1, struct time *time2) {
     return diff;
 }
 
-int main() {
+void testSubtractTimes() {
     struct time t0;
     struct time t1;
     printf("Podaj pierwszy czas\n");
@@ -58,5 +58,17 @@ int main() {
     printTime(&t1);
     struct time difference = subtractTimes(&t0, &t1);
     printTime(&difference);
+}
+
+struct samochod{
+    char marka[20];
+    char model[20];
+    int rok_produkcji;
+    double pojemnosc;
+};
+
+int main() {
+    testSubtractTimes();
+    struct samochod eg1 = {"mercedes","gls",2015,3.5};
     return 0;
 }
